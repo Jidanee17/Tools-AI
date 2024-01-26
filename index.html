@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publikasi Web ke Web Hosting</title>
+    <link rel="stylesheet" href="w3.css" />
+    <link rel="icon" href="img/AI.png">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      background-image: linear-gradient(320deg,#222,#222,#222,#3e32a8,#e310c7);
+    }
+
+    button {
+      transition: all 0.3s ease-in-out;
+    }
+
+    a {
+      transition:all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    #container {
+      height: 100vh;
+      padding: 0;
+    }
+
+    #banner {
+      color: #fff;
+      height: 25%;
+      border-bottom: 1px solid purple;
+      margin: 0;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(img/banner2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #navbar {
+      padding: 0.5rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+      color: #fff;
+      border-bottom: 1px solid purple;
+    }
+
+    #navbar .logo {
+      font-weight: 700;
+    }
+
+    #navbar span {
+      color: rgb(255, 0, 255);
+    }
+
+    #nav-list {
+      margin-left: 400px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    #content {
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position:relative;
+    }
+
+    #content #home img {
+      width: 300px;
+      height: 300px;
+    }
+
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      border-radius:30px;
+      background: #ffffffcc;
+      padding: 20px;
+    }
+
+    #profile {
+      position:absolute;
+      top: 1.7em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      min-width: 25%;
+      background-color: #ffffffcc;
+      background-image:linear-gradient(90deg, #3e32a8,#e310c7);
+      border-radius: 30px;
+
+    }
+
+    #profile img {
+      margin-top: 20px;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    #profile a {
+      text-decoration:none;
+      font-size:2.4em;
+      position:absolute;
+      right:1em;
+      bottom:.4em;
+      border-bottom:1px solid black;
+    }
+
+    #profile a:hover {
+      color: #e310c7;
+      transform:translateY(-10%);
+    }
+
+    #profile #text-content {
+      background-color:#ffffffcc;
+      width: 100%;
+      text-align: center;
+      border-radius: 0 0px 30px 30px;
+    }
+
+   
+
+
+
+
+    #tools-ai1, #tools-ai2, #tools-ai3 {
+      background-color: #ffffffcc;
+      width: 50%;
+      display: flex;
+      padding: 2rem;
+      border-radius: 30px;
+    }
+
+
+    #tools-ai1 img, #tools-ai2 img{
+      width: 300px;
+      height: 300px;
+    }
+
+    #tools-ai3 img {
+      width:250px;
+      height:300px;
+    }
+
+    #tools-ai3 #text-content {
+        margin-left:20px;
+    }
+
+   
+
+    #tools-ai1,
+    #tools-ai2,
+    #tools-ai3, 
+    #bing-chat,
+    #copy-ai,
+    #dectopus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    #explore{
+      background-color:#ffffffcc;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:1em 1em;
+      border-radius:30px;
+    }
+
+    #explore img {
+      width:200px;
+      height:200px;
+    }
+    
+    #explore span {
+      font-size:2rem;
+    }
+
+    #explore h1 {
+      font-size:2rem;
+      letter-spacing:5px;
+    }
+
+    #explore #item-container {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    #explore #item2 {
+       
+       border-right:1px solid rgb(218, 4, 218);
+       border-left:1px solid  rgb(218, 4, 218);
+       margin:0px 15px 0;
+    }
+
+    #explore a {
+      background-color: rgb(218, 4, 218);
+      color:white;
+    }
+
+    
+
+  </style>
+
+  <body>
+
+    <div class="w3-container" id="container">
+      <!-- BANNER -->
+      <div id="banner">
+        <h1 class="w3-animate-top">TOP <span class="w3-animate-fading" style="color:rgb(255, 0, 255);">AI TOOLS</span> IN 2024</h1>
+      </div>
+      
+      <!-- NAVBAR -->
+      <div id="navbar" class="w3-bar">
+        <h3 class="logo">
+          <em>Jidane.<span>Blog</span></em>
+        </h3>
+      
+
+        <div id="nav-list">
+          <button
+            class="tablink w3-bar-item w3-button w3-hover-purple "
+            onclick="openContent('home')"
+          >
+            Home 🏠
+          </button>
+
+          <button class="w3-bar-item w3-button w3-hover-purple" onclick="openContent('profile')">Profile 🙎🏼‍♂️</button>
+          <a href="#" class="w3-bar-item w3-button w3-hover-purple" onclick="openContent('explore')">Explore 🌐</a>
+
+          <div class="w3-dropdown-hover">
+            <button class="w3-button w3-hover-purple">Tools AI 🔧</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="#" class="w3-bar-item w3-button w3-hover-purple" onclick="openContent('tools-ai1')"
+                >Bing Chat</a
+              >
+              <a href="#" class="w3-bar-item w3-button w3-hover-purple" onclick="openContent('tools-ai2')"
+                >Copy.Ai </a
+              >
+              <a href="#" class="w3-bar-item w3-button w3-hover-purple" onclick="openContent('tools-ai3')"
+                >Dectopus</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CONTENT SECTION -->
+
+      <div id="content">
+
+        <!-- Home --> 
+        <section id="home" style="display:flex" class="content w3-animate-bottom" >
+          <img src="img/AI.png" alt="" />
+          <div id="text-content">
+            <h1 style="font-size:4em;color:rgb(231, 8, 231);">Hello ~</h1>
+            <h2>"Selamat Datang di Website Ini"</h2>
+            <p>
+              Website ini <b>memaparkan</b> beberapa <em>Tools AI</em> <br />yang dapat membantu
+              dan mempercepat pekerjaan kita.
+            </p>
+            <p>Penasaran?</p>
+            <p>Arahkan <em>cursor </em>ke menu <em><b style="color:rgb(197, 5, 197);">Tools AI</b></em> untuk melihat!</p>
+          </div>
+        </section>
+
+        <!-- Profile -->
+        <section id="profile" class="w3-card-4 w3-animate-zoom content" style="display:none;">
+          <img src="img/AI2.png" alt="" />
+          <div id="text-content">
+            <h2>Jidansyah Maulana Sumaila</h2>
+            <h3>- 10123267 -</h3>
+            <h4>- IF 7 -</h4>
+            <a href="https://www.instagram.com/zidanrvl.17/" target="_blank"><i class="ri-instagram-fill"></i></a>
+          </div>
+        </section>
+
+
+        <!-- Explore -->
+        <section id="explore" class="w3-card-4 content w3-animate-left" style="display:none;">
+          <p><span>Klik Tombol <span style="color:rgb(218, 4, 218);" class="w3-animate-fading">GO!</span></span><br>untuk pergi ke situs AI yang ingin dituju.</p>
+          
+          <div id="item-container">
+
+            <div id="item1">
+              <img src="img/bing_Logo.png" alt="">
+              <h1>BING CHAT</h1>
+              <a href="https://www.bing.com/search?q=Bing+AI&showconv=1" target="_blank" class="w3-button w3-round-large">Go</a>
+            </div>
+  
+            <div id="item2">
+              <img src="img/copy-AI.png" alt="">
+              <h1>COPY.AI</h1>
+              <a href="https://www.copy.ai/tools" target="_blank" class="w3-button w3-round-large">Go</a>
+            </div>
+  
+            <div id="item3">
+              <img src="img/dectopus.png" alt="">
+              <h1>DECTOPUS</h1>
+              <a href="https://www.decktopus.com" target="_blank" class="w3-button w3-round-large">Go</a>
+            </div>
+
+          </div>
+          
+
+
+        </section>
+
+        <!-- Tools AI -->
+        <section id="tools-ai1" class="w3-card-4 w3-animate-right content" style="display:none">
+          <div id="bing-chat">
+            <img src="img/bing_Logo.png" alt="bing-chat" />
+            <div id="text-content">
+              <h1>BING CHAT</h1>
+              <p>
+                Bing adalah mesin pencari yang dimiliki dan dioperasikan oleh Microsoft. Mesin pencari ini menggunakan teknologi kecerdasan buatan (AI) untuk memberikan hasil pencarian yang relevan dan bervariasi kepada pengguna. AI mungkin digunakan dalam proses pencocokan pola, pemahaman konten, dan penyaringan hasil pencarian.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="tools-ai2" class="w3-card-4 w3-animate-left content" style="display:none;">
+          <div id="copy-ai">
+            <img src="img/copy-AI.png" alt="bing-chat" />
+            <div id="text-content">
+              <h1>COPY.AI</h1>
+              <p>
+                Copy.Ai adalah sebuah software alat bantu yang bisa kamu gunakan untuk menulis dengan basis utama menggunakan AI (artificial intelligence). Sehingga kualitas tulisan yang ada juga memiliki fitur yang sangat baik. Kamu bisa mengandalkan alat bantu ini dalam menulis konten. Bahkan juga bisa menggali ide hingga posting konten pada sosial media.
+              </p>
+            </div>
+          </div>
+          
+        </section>
+
+        <section id="tools-ai3" class="w3-card-4 w3-animate-bottom content" style="display:none;" >
+          <div id="dectopus">
+            <img src="img/dectopus.png" alt="bing-chat" />
+            <div id="text-content">
+              <h1>DECTOPUS</h1>
+              <p>
+                Decktopus adalah tools AI yang mudah digunakan untuk membuat presentasi. Anda hanya perlu memberikan informasi tentang topik presentasi, audiens yang akan melihatnya, dan tujuan presentasi.
+                Kemudian, Decktopus akan menggabungkan semua informasi tersebut dan membuat presentasi lengkap dengan teks dan slide.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+       
+      </div>
+    </div>
+
+    <script>
+      function openContent(contentName) {
+        var i, x;
+        x = document.getElementsByClassName("content");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = 'none';
+        }
+    
+        document.getElementById(contentName).style.display = "flex";
+        
+        
+      }
+    </script>
+  </body>
+</html>
